@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<HTML lang = "en">
+<head>
+    <meta charset = "UTF-8"> <!-- Telling browser to use UTF-8 character encoding so is the machine able to read it -->
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1"> <!-- "viewport" as the value of "name" attribute tells the browser to target the "body" element for having its showing content to be based on device-width (i.e., tells that this is responsive design website). "Intial-scale = 1" tells the browser that the contents do not need to be zoomed to fit out them, just make it 100% of the screen size/viewport width -->
+    <title>Learning HTML</title>
+    <link rel = "stylesheet" href = "index-style.css">
+</head>
+<body>
+    <header> <!-- This tag is categorized as block-level element -->
+        Header element - some header information goes here. Usually consists of company logo, some tag lines, etc. Sometimes, navigation is contained in header as well.
+        <nav> <!-- This tag is categorized as block-level element -->
+            Nav (short of navigation) element - Usually contains links to different parts (other documents, contents, posts, etc) of the web site.
+        </nav>  
+    </header>
+    <!-- h1 tag is the main heading (the most important heading, especially for page rangking) -->
+    <h1 id = "top">Thanks, Coursera!</h1> <!-- Header tags reserve its own line -->
+    <p>&quot;Thank you for teaching us through this course, love it!&quot; Mr. X</p> <!-- p element takes up its own line -->
+    <br> <!-- Acts as like as giving a new line -->
+
+    <!-- Block-level elements reserve its own line eventhough its preceeding or following element is the inline element -->
+    <h2>Div and Span Elements</h2>
+    <div>*** DIV 1: Some contents here ***</div> <!-- Div reserves this line for its content -->
+    <div>*** DIV 2: Following right after div 1 ***</div> <!-- Div reserves this line for its content -->
+    <span>*** SPAN 1: Following right after div 2 ***</span>
+    <div>
+        *** DIV 3: Following right after span 1 ***
+        <span>SPAN 2: INSIDE div 3</span> <!-- "Enter", tab, extra spaces, etc. are ignored by the browser and automatically act as one space instead -->
+        *** Continue content of div 3 ***
+    </div>
+    <br>
+
+    <!-- Testing for the differences between each headings used visually-->
+    <h2>Islam</h2> <!-- This tag is categorized as block-level element -->
+    <section> <!-- This (semantic) tag is categorized as block-level element -->
+        <h3>Section 1 - The Definition</h3>
+        <article><h4>*** Article 1 ***</h4></article> <!-- This tag is categorized as block-level element -->
+    </section>
+    <br>
+    <section>
+        <h3>Section 2 - The Reasoning</h3>
+        <article><h4>***    Article 2 ***  </h4></article> <!-- "Tab" and extra spaces here are just ignored by browser -->
+        <article><h4>*** Article 3 ***</h4></article>
+        <article><h4>*** Article 4 ***</h4></article>
+    </section>
+
+    <!-- *** LIST PRACTICES *** -->
+    <h2>List Practices</h2>
+    <ul>
+        <li>Someone's typical dinner shopping list:
+        <!-- Using unordered list, gives bulleted list to the items -->
+            <ul> <!-- This (semantic) tag is categorized as block-level element -->
+                <li>Milk</li> <!-- This (semantic) tag is categorized as block-level element -->
+                <li>Donuts</li>
+                <li>Cookies
+                    <ul>
+                        <li>Chocolate</li>
+                        <li>Sugar</li>
+                        <li>Peanut Butter</li>
+                    </ul>
+                </li>
+                <li>Pepto Bismol</li>
+            </ul>
+        </li>
+        <li>Oreo Cookie Eating Procedure
+        <!-- Using Ordered List -->
+            <ol>
+                <li>Open box</li>
+                <li>Take out cookie</li>
+                <li>Make a Double Oreo
+                    <ol>
+                        <li>Peel off the top part</li>
+                        <li>Place another cookie in the middle</li>
+                        <li>Put back the top part</li>
+                    </ol>
+                </li>
+                <li>Enjoy!</li>
+            </ol>
+        </li>
+    </ul>
+
+    <!-- *** HTML CHARACTERS ENTITY REFERENCES *** -->
+    <h2>HTML Characters Entity References</h2>
+    <p>There are three characters that should always be escaped so they do not cause any rendering issues (between be treated as HTML&nbsp;and&nbsp;content):</p>
+    <ul>
+        <li>Greater than sign (&gt;): use "&amp;gt;" instead of "&gt;"</li>
+        <li>Less than sign (&lt;): use "&amp;lt;" instead of "&lt;"</li>
+        <li>Ampersand sign (&amp;): use "&amp;amp;" instead of "&amp;"</li>
+    </ul>
+    
+    <!-- *** USING TYPES OF LINK *** -->
+    <h2>Using Types of Link</h2>
+    <!-- ** Using Internal Link ** -->
+    <section>
+        
+        <h3>Using Internal Link</h3>
+        <!-- This way, we create link that points out to other page within the same site -->
+        <p> <!-- P tag makes each new line has more line spacing than div tag. BUT, you cannot nest inside this tag block-level element/ flow content -->
+            We can link to a file in the same directory as this HTML file like this:
+            <!-- This case, we use relative link that a linked file is within the same directory as this file --> 
+            <a href = "sample-page.html" title ="Link to the Sample Page Within the Same Site">
+                <!-- This text/content will be pointed out as a link -->
+                <span>Linking to a file in the same directory</span>
+            </a>
+        </p> 
+    </section>
+    <!-- ** USING EXTERNAL LINK ** -->
+    <section>  
+        <h3>Using External Link</h3>
+        <p> Let's link to 
+            <a href = "https://www.instagram.com/dwiikalam" title = "Link to my Instagram account" target = "_blank"> 
+                <!-- https and http are needed to be used is because the domain name difference between the linked page and our page (The only difference between those is HTTPS use SSL to encrypt normal HTTP requests and responses) -->
+                <!-- Target tag makes visitors to visit the linked page without leaving out our page. So, it is VERY USEFUL -->
+                My&nbsp;Instagram&nbsp;account.</a> 
+            Check it out! 
+        </p>
+    </section>
+    <!-- ** Using Fragment Identifier ** -->
+    <section>
+        <h3>Using Fragment Identifier</h3>
+        <div>We can link to the specific section of our page by using this type of link.</div>
+        <div>Let's say, we have a couple of sections below that be linked:</div>
+        <ul>
+            <li><a href = "#1st-section">1st Section</a></li>
+            <li><a href = "#2nd-section">2nd Section</a></li>
+            <li><a href = "#3rd-section">3rd Section</a></li>
+            <li><a href = "#4th-section">4th Section</a></li>
+        </ul>
+        <section id = "1st-section">
+            <h4>First Section</h4>
+            <p>Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly? Cat cat what that can fly?</p>
+        </section>
+        <section>
+            <h4><a name = "2nd-section">Second Section</a></h4> <!-- Obsolete way, consider putting "id" attribute instead! -->
+            <p>Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....) Walking walking to the market... (good-looking....)</p>
+        </section>
+        <section id = "3rd-section">
+            <h4>Third Section</h4>
+            <p>Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what? Cat flying, seen what?</p>
+        </section>
+        <section>
+            <h4><a name = "4th-section">Fourth Section</a></h4> <!-- Obsolete way, consider putting "id" attribute instead! -->
+            <p>Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap? Content content what which cheap?</p>
+        </section>
+        <br>
+
+    </section>
+
+    <!-- *** INSERTING IMAGES *** -->
+    <section>
+        <h3>Inserting Image</h3>
+        <!--    https://klikhost.com/wp-content/uploads/2017/01/https-to-http-klikhost.com_.jpg 
+                https://i.ytimg.com/vi/1Ne1hqOXKKI/maxresdefault.jpg
+        -->
+        <P>
+            <img src = "https://klikhost.com/wp-content/uploads/2017/01/https-to-http-klikhost.com_.jpg" height = "400" width = "322" alt = "https-to-http-klikhost.com_.jpg - ">
+            This shows that "img" tag is an inline element.
+        </p>
+        <div>
+            <img src = "ceng-ceng.jpg" width = "320" height = "180" alt = "ceng-ceng.jpg - ">
+            <div>So cutee, isn't itt?? Huehehee -- This img is on my hard drive anyway, so sorry if you could not see the another level cutenest of this creature........ hiks&nbsp;:(</div>
+        </div>
+    </section>
+
+    <!-- *** APPLYING CSS SELECTOR TYPES *** -->
+    <h2 class = "CSS-selector-types">Applying CSS Selector Types</h2>
+    <p class = "CSS-selector-types">this line, we applied CSS rule on element selector "p". Color: blue || Text-align: center</p>
+    <div class = "highlight CSS-selector-types">
+        These lines, we applied CSS rule on class selector "highlight". 
+        <div><ul>
+            <li>font-size: 20px;</li>
+            <li>font-weight: bold;</li>
+            <li>font-style: italic;</li>
+            <li>background-color: green;</li>
+            <li>opacity: .7;</li> <!-- 0.7 means 70% -->
+        </ul></div>      
+    </div>
+
+    <div id = "mainPoint" class = "CSS-selector-types">
+        These lines, we applied CSS rule on id selector "mainPoint". Remember, using id attribute with its exact value can be used only once within the entire document.
+        <div><ul>
+            <li>font-size: 20px;</li>
+            <li>font-weight: bold;</li>
+            <li>background-color: red;</li>
+            <li>opacity: .5;</li>
+        </ul></div>      
+    </div>
+
+    <!-- *** COMBINING SELECTORS *** -->
+    <!-- ** SELECTOR WITH SELECTORS ** -->
+    <h2 class = "selector-selectors" id = "base" >Combining Selectors</h2>
+    <div>
+        The heading above is using CSS rule: 
+        <ul>
+            <li>color: chocolate;</li>
+            <li>font-weight: bold;</li>
+            <li>font-family: Arial, Helvetica, sans-serif;</li>
+            <li>text-align: center;</li>
+        </ul>
+    </div>
+    <section>
+        <h3>Selector with Selectors</h3>
+        <!-- All p elements with class "highlight" -->
+        <p class = "selector-selectors highlight">
+            E.g., all p elements with class "highlight". || font-style: italic;
+        </p>    
+        <div class = "selector-selectors highlight mainPoint">
+            All elements with class "highlight" as well as with class "mainPoint"
+            <ul>    
+                <li>color: white;</li>
+                <li>background-color: black;</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ** DIRECT CHILD ** -->
+    <section>
+        <h3 class = "direct-child">Direct Child</h3>
+        <!-- Any article element which is a direct child of a section element, i.e., any article element whose immediate parent is a section element-->
+        <section class = "direct-child">
+            <h4>Differences By Direct Child Implementation</h4>
+            <article class = "direct-child">
+                <h5 class = "direct-child">The Article Whose Immediate Parent Is Section Element</h5>
+            </article>
+            <div class = "direct-child"> The heading above is applying this CSS rule:
+                <ul class = "direct-child">
+                    <li class = "direct-child">Color: green;</li>
+                    <li class = "direct-child">font-size: 24px;</li>
+                </ul>
+            </div>
+            <div class = "direct-child">
+                <article class = "direct-child">
+                    <!-- Article is not the direct child of section element -->
+                    <h5 class = "direct-child">This Article Will Not Be Affected by The CSS Rule Above</h5>
+                </article>
+            </div>
+        </section>
+        
+        <section class = "direct-child">
+            <!-- Any h2 element which is a direct child of a section element, i.e., any h2 element whose immediate parent is a section element -->
+            <h2 class = "direct-child">The h2 Element Whose Immediate Parent is Section Element</h2>
+            <div class = "direct-child">The heading above is applying CSS rule:</div>
+            <ul class = "direct-child"><li class = "direct-child">color: green;</li></ul>
+        </section>
+    </section>    
+    <section class = "direct-child">
+        <!-- All p elements whose immediate parent is div element and the div element's immediate parent is section element -->
+        <h3 class = "direct-child">Check Out These Branches of Direct Child Selectors</h3>
+        <div class = "direct-child"> 
+            <p class = "direct-child">If this rule is acceptable, this line will apply this CSS rule:</p>
+            <ul class = "direct-child">
+                <li class = "direct-child">color: blue;</li>
+                <li class = "direct-child">background-color: red;</li>
+                <li class = "direct-child">font-style: italic;</li>
+            </ul> 
+        </div>
+    </section>
+
+    <!-- ** DESCENDANT SELECTOR ** -->
+    <h3 class= "descendant-selector">Descendant Selector</h3>
+    <section class = "descendant-selector">
+        <h4>Table of contents:</h4>
+        <ul class= "descendant-selector">
+            <li class= "descendant-selector">Article 1</li>
+            <li class= "descendant-selector">Article 2</li>
+            <li class= "descendant-selector">Article 3</li>
+        </ul>
+    </section>
+    <article class= "descendant-selector">
+        <h4 class= "descendant-selector">Shopping List</h4>
+        <ul class= "descendant-selector">
+            <li class= "descendant-selector">Cookies</li>
+            <li class= "descendant-selector">Cake</li>
+            <li class= "descendant-selector">Pie</li>
+        </ul>
+    </article>
+
+    <!--- *** PSEUDO-CLASS SELECTORS *** -->
+    <h2 class = "pseudo-class" id = "pseudo">Pseudo-Class Selectors</h2>
+    <header class = "pseudo-class">
+        <ul>
+            <li><a href = "/">Home</a></li> <!-- Link to directory -->
+            <li><a target = "_blank" href = "https://instagram.com/dwiikalam">My Instagram</a></li>
+            <li><a href = "#1st-section">Section</a></li> <!-- Link to directory -->
+        </ul>
+    </header>
+
+    <section class = "pseudo-class">
+        <h3>DIV Section</h3>
+        <div>DIV 1</div>
+        <div>DIV 2</div>
+        <div>DIV 3</div>
+        <div>DIV 4</div>
+        <div>DIV 5</div>
+        <div>DIV 6</div>
+        <div>DIV 7</div>
+        <div>DIV 8</div>
+        <div>DIV 9</div>
+        <div>DIV 10</div>
+        <div>DIV 11</div>
+        <div>DIV 12</div>
+        <div>DIV 13</div>
+        <div>DIV 14</div>
+        <div>DIV 15</div>
+        <div>DIV 16</div>
+    </section>
+
+    <!-- *** CONFLICT RESOLUTIONS *** -->
+    <section>
+        <!-- ** Origin-Merge Concept ** -->
+        <h2>Conflict Resolution</h2>
+        <section class = "origin-merge">
+            <h3>Origin-Merge Example</h3>
+            <p style = "color: maroon;">The rule is simple: last declaration wins</p>
+            <p style="font-style: italic;">If there is no conflict, declarations merge into one rule.</p>
+        </section>
+
+        <!-- ** Inheritance Concept ** -->
+        <section class = "inheritance">
+            <h3>Inheritance Concept</h3>
+            <p>Inheritance allows us to write more global styles on parent elements and then "fine-tune" the styles for some of the child elements as needed. Such approach makes writting CSS very efficient.</p>
+        </section>
+
+        <!-- ** Specificity Concept ** -->
+        <section class = specificity>
+            <h3 class = "header3">Specificity Concept</h3>
+            <p class = "blurb">Has ahdhaw dudk shadkj hawd hasjdh oqw asfh oipwe fn oiwih gioWH GONKLSDG OIHAG S GOIHS</p>
+        </section>
+    </section>
+
+    <!-- *** FONT STYLING *** -->
+    <section class = "font-styling">
+        <h2>Font Styling</h2>
+        <p>
+            We can get the commonly font combinations used in <a href = https://www.w3schools.com/cssref/css_websafe_fonts.asp target = "_blank" title = "Web Providing Commonly Font Combinations Used">here.</a>
+            The full link excesses the device's width.
+        </p>
+        <div>Regular text (120% of the default size.)
+            <div style = "font-size: 2em;">
+                2em text
+                <div style = "font-size: 2em;">
+                    4em text
+                    <div style = "font-size: .5em;">2em again</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *** THE BOX MODEL *** -->
+    <section class = "box-model">
+        <h2>THE BOX MODEL</h2>
+        <div id = "content-before">
+            Look at the left-end and right-end side of this text. Background-color of the text is not fulfilling the entire lines (even though the element used is flow-content/block-level element.) 
+            <div>It is because the margin that the browser applied by default is 8px for each side.</div>
+        </div>
+        <div id = "box">
+            <div id = "content-after">
+                As comparison, look at through this text line. After we configured its box, the result is present. 
+            </div>
+        </div>
+        <p>
+            This text overflows over its box. This text overflows over its box. This text overflows over its box. This text overflows over its box. This text overflows over its box. This text overflows over its box. This text overflows over its box. This text overflows over its box. This text overflows over its box. This text overflows over its box. 
+        </p>
+    </section>
+
+    <!-- *** BACKGROUND PROPERTIES *** -->
+    <section class = background-properties>
+        <h2>Background Properties</h2>
+        <div>Checkout this element.</div>
+    </section>
+
+    <!-- *** POSITIONING ELEMENTS BY FLOATING *** -->
+    <section class = floating-elements>
+        <h2>Floating Elements</h2>
+        <section class = floating-elements-1>
+            <h3>Testing</h3>
+            <div>
+                <p id = "p1"></p>
+                <p id = "p2"></p>
+                <p id = "p3"></p>
+                <p id = "p4"></p>
+                <div>This is regular content continuing after the paragraph boxes.</div>
+            </div>
+        </section>
+        <section class = "floating-elements-2">
+            <h3>Two Columns of Floating Elements</h3>
+            <div>
+                <div>Look, this line and those 2 paragraphs below should be colored cyan on background. But, because those 2 have been specified as floated elements, they do not apply the declared background-color (as they are leaving the regular content flow).</div>
+                <div>However, if we specify this element and element above to the below side of those, the background color will be applied.</div>
+                <p id = "p1-2">I want something, I want something, I want something, I want something, I want something, I want something, I want something, I want something, I want something, I want something, I want something, I want something.</p>
+                <p id = "p2-2">Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat Cat.</p>
+            </div>
+        </section>
+    </section>
+
+    <!-- *** RELATIVE AND ABSOLUTE POSITIONING *** -->
+    <section class = "rNa-positioning">
+        <h2>Relative and Absolute Positioning</h2>
+        <section class = "relative-positioning">
+            <h3>Relative Positioning</h3>
+            <div>
+                <p id = "p1-rp"></p>
+                <p id = "p2-rp"></p>
+                <p id = "p3-rp"></p>
+                <p id = "p4-rp"></p>
+            </div>
+        </section>
+        <section class = absolute-positioning>
+            <h3>Absolute Positioning</h3>
+            <div>
+                <p id = "p1-ap"></p>
+                <p id = "p2-ap"></p>
+                <p id = "p3-ap"></p>
+                <p id = "p4-ap"></p>
+            </div>
+        </section>
+    </section>
+
+    <!-- *** MEDIA QUERIES *** -->
+    <section class = media-query>
+        <h2>Media Query</h2>
+        <p id = "p1-mq">
+        </p>
+        <p id = "p2-mq">
+        </p>
+    </section>
+
+    <!-- *** RESPONSIVE DESIGN *** -->
+    <section class = responsive-design>
+        <h2>RESPONSIVE DESIGN</h2>
+        <div class = "row">
+            <div class = "lg-3-col-of-12 md-6-col-of-12"><p>Item 1</p></div>
+            <div class = "lg-3-col-of-12 md-6-col-of-12"><p>Item 2. Wow, this is so cool!</p></div>
+            <div class = "lg-3-col-of-12 md-6-col-of-12"><p>Item 3</p></div>
+            <div class = "lg-3-col-of-12 md-6-col-of-12"><p>Item 4</p></div>
+            <div class = "lg-3-col-of-12 md-6-col-of-12"><p>Item 5. This is so cool!</p></div>
+            <div class = "lg-3-col-of-12 md-6-col-of-12"><p>Item 6</p></div>
+            <div class = "lg-3-col-of-12 md-6-col-of-12"><p>Item 7</p></div>
+            <div class = "lg-3-col-of-12 md-6-col-of-12"><p>Item 8</p></div>
+        </div>
+    </section>
+
+    <br>
+    <p id = "back-to">Back to the <a href = "#top">top&nbsp;of&nbsp;the&nbsp;page.</a></p>
+
+    <br>
+    <aside> <!-- This tag is categorized as block-level element -->
+        <!-- HTML characters entity reference is used here -->
+        ASIDE - Some information that relates to the main topic (main heading) of the page, i.e.,&nbsp;related&nbsp;posts.
+    </aside>
+    <br>
+    <footer>
+        &copy;&nbsp;2021&nbsp;Fulan
+    </footer>
+</body>
+</html>
