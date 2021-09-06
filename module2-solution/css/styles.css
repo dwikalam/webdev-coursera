@@ -43,7 +43,6 @@ h2#sushi{
 p{
     font-weight: normal;
     text-align: left;
-    width: 100%;
     margin-bottom: 0px;
     padding: 30px 10px 10px 10px;
     font-size: 14.28px;
@@ -57,7 +56,7 @@ p{
 /** The "Column" Showed on The Page **/
 section{
     background-color: rgb(150, 150, 150);
-    margin: 10px;
+    margin: 10px 10px 20px 10px;
     border: 1px solid black;
     position: relative;
 }
@@ -70,6 +69,9 @@ section{
         width: 33.33%;
         float: left;
     }
+    section{
+        margin-bottom: 10px;
+    }
 }
 
 /** Tablet View **/
@@ -78,6 +80,9 @@ section{
     .col-md-6{
         width: 50%;
         float: left;
+    }
+    section{
+        margin-bottom: 10px;
     }
 
     /* Properties of Sushi Section's Direct Parent Element (i.e., div) */
