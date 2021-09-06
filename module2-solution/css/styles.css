@@ -43,8 +43,9 @@ h2#sushi{
 p{
     font-weight: normal;
     text-align: left;
-    width: 95%;
-    margin: 50px auto 15px auto;
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 30px 10px 10px 10px;
     font-size: 14.28px;
 }
 
