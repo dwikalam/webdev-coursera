@@ -40,7 +40,7 @@ h2#base.selector-selectors {
 p.highlight.selector-selectors {
     font-style: italic;
 }
-/* All elements with class "highlight" as well as with class "mainPoint" */
+/* All elements with class "highlight" and class "mainPoint" */
 .highlight.mainPoint.selector-selectors {
     color: white;
     background-color: black;
