@@ -1,0 +1,93 @@
+/*** BASE STYLES ***/
+*{
+    box-sizing: border-box;
+}
+
+h1, h2, p{
+    color:black;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    font-weight: bold;
+}
+
+h1{
+    margin: 40px 0 40px 0;
+    font-size: 25px; /* About 75% bigger than the content/text of paragraph element */
+}
+
+h2{
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px black solid;
+    padding: 5px;
+    margin-top: 0px;
+    font-size: 17.85px; /* About 25% bigger than the content/text of paragraph element */
+}
+
+h2#chicken{
+    background-color: rgb(216, 123, 154);
+}
+
+h2#beef{
+    color: white;
+    background-color: rgb(167, 70, 70);
+    width: 170px; /** Mockup illustration tells me that the width of "beef" section's title is wider than the rest of sections' title **/
+}
+
+h2#sushi{
+    background-color: rgb(255, 255, 158);
+}
+
+p{
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 0px;
+    padding: 30px 10px 10px 10px;
+    font-size: 14.28px;
+}
+
+/** Grid Layout **/
+.row{
+    width: 100%;
+}
+
+/** The "Column" Showed on The Page **/
+section{
+    background-color: rgb(150, 150, 150);
+    margin: 10px 10px 20px 10px;
+    border: 1px solid black;
+    position: relative;
+}
+
+/*** MEDIA QUERIES ***/
+
+/** Desktop View **/
+@media (min-width: 992px){
+    div.col-lg-4{
+        width: 33.33%;
+        float: left;
+    }
+    section{
+        margin-bottom: 10px;
+    }
+}
+
+/** Tablet View **/
+@media (min-width: 768px) and (max-width: 991px){
+    /* Properties of Chicken and Beef Sections' Direct Parent Element (i.e., div) */
+    .col-md-6{
+        width: 50%;
+        float: left;
+    }
+    section{
+        margin-bottom: 10px;
+    }
+
+    /* Properties of Sushi Section's Direct Parent Element (i.e., div) */
+    .col-md-12{
+        width: 100%;
+        float: left;
+    }
+}
